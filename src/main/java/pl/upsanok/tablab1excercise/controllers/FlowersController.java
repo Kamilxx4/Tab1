@@ -9,14 +9,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import pl.upsanok.tablab1excercise.controllers.dto.Flower;
 
-@RestController()
+//@RestController()
 @CrossOrigin(origins = {"http://localhost:3000", "https://tab-front-production.up.railway.app"})
-public class FlowersController {
 
+public class FlowersController
+{
   private String favFlower = "Narcyz";
 
   @GetMapping("flowers")
-  public ResponseEntity<List<Flower>> getName() {
+  public ResponseEntity<List<Flower>> getName()
+  {
     return ResponseEntity.ok(
         List.of(
             Flower.builder()
